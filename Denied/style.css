@@ -1,0 +1,137 @@
+/* Reset & Font */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Card Layout */
+.card {
+  width: 960px;
+  background: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* Header with Logos */
+.header {
+  background-color: rgba(17, 46, 163, 1);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 0;
+}
+
+.header h1 {
+  font-size: 32px;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.logo {
+  width: 27px;
+  height: 27px;
+}
+
+/* Content Section */
+.main-content {
+  display: flex;
+  padding: 24px 32px;
+  gap: 28px;
+}
+
+/* Left Section (Photo) */
+.left-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-border {
+  border: 18px solid red;
+  width: 318px;
+  height: 338px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-photo {
+  width: 328px;
+  height: 348px;
+  top: 10px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Right Section (Details) */
+.right-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  height: 46px;
+}
+
+/* Label Box */
+.label {
+  background-color: #003cb3;
+  color: white;
+  padding: 12px 18px;
+  font-size: 16px;
+  font-weight: bolder;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Info Box */
+.info {
+  background-color: #D9D9D9;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: bolder;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  width: 219px;
+  height: 15px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  
+}
+
+/* Footer */
+.footer {
+  font-family: 'Orbitron', sans-serif;
+  background-color: white;
+  color: red;
+  text-shadow: 10;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  padding: 18px 0;
+  border-top: 2px solid #ddd;
+  letter-spacing: 1px;
+}
