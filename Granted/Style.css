@@ -7,17 +7,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* Card Layout */
 .card {
   width: 960px;
+  max-width: 95%;
   background: #ffffff;
   border: 2px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header with Logos */
@@ -28,7 +31,9 @@ body {
   align-items: center;
   justify-content: center;
   gap: 16px;
-  padding: 16px 0;
+  padding: 16px;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .header h1 {
@@ -46,13 +51,15 @@ body {
 /* Content Section */
 .main-content {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding: 24px 32px;
   gap: 28px;
 }
 
 /* Left Section (Photo) */
 .left-section {
-  flex: 1;
+  flex: 1 1 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,35 +67,36 @@ body {
 
 .photo-border {
   border: 18px solid green;
-  width: 318px;
-  height: 338px;
   border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  max-width: 318px;
+  height: 328px;
 }
 
 .profile-photo {
-  width: 308px;
-  height: 328px;
-  top: 10px;
+  width: 100%;
+  height: 318px;
   object-fit: cover;
   border-radius: 6px;
 }
 
 /* Right Section (Details) */
 .right-section {
-  flex: 2;
+  flex: 2 1 320px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 14px;
 }
 
+/* Each row */
 .details {
   display: flex;
-  align-items: center;
-  height: 46px;
+  align-items: stretch;
+  flex-wrap: wrap;
 }
 
 /* Label Box */
@@ -101,6 +109,7 @@ body {
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   width: 160px;
+  min-width: 140px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -114,23 +123,156 @@ body {
   font-weight: bolder;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
-  width: 219px;
   flex: 1;
+  min-width: 180px;
   display: flex;
   align-items: center;
-  
 }
 
 /* Footer */
 .footer {
   font-family: 'Orbitron', sans-serif;
   background-color: white;
-  color: rgba(27, 131, 55, 1);
-  text-shadow: 10;
+  color: green;
   text-align: center;
   font-size: 32px;
   font-weight: 700;
   padding: 18px 0;
   border-top: 2px solid #ddd;
   letter-spacing: 1px;
+}
+
+/* Small Screens */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .label,
+  .info {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .footer {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .main-content {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .photo-border {
+    max-width: 100%;
+    border-width: 12px;
+  }
+
+  .right-section {
+    gap: 10px;
+  }
+
+  .label {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .info {
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .details {
+    flex-direction: column;
+  }
+
+  .footer {
+    font-size: 20px;
+    padding: 14px;
+  }
+}
+
+/* Large Screens (PC & TV) */
+@media (min-width: 1440px) {
+  .card {
+    width: 1200px; /* Bigger card for large displays */
+  }
+
+  .header h1 {
+    font-size: 40px;
+  }
+
+  .logo {
+    width: 34px;
+    height: 34px;
+  }
+
+  .photo-border {
+    max-width: 380px;
+    height: 390px;
+    border-width: 20px;
+  }
+
+  .profile-photo {
+    height: 380px;
+  }
+
+  .label {
+    font-size: 18px;
+    padding: 14px 20px;
+    width: 200px;
+  }
+
+  .info {
+    font-size: 16px;
+    padding: 14px 20px;
+  }
+
+  .footer {
+    font-size: 40px;
+  }
+}
+
+/* Extra Large Screens (TV / Ultra-wide) */
+@media (min-width: 1920px) {
+  .card {
+    width: 1400px;
+  }
+
+  .header h1 {
+    font-size: 48px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .photo-border {
+    max-width: 420px;
+    height: 430px;
+  }
+
+  .profile-photo {
+    height: 420px;
+  }
+
+  .label {
+    font-size: 20px;
+    width: 220px;
+  }
+
+  .info {
+    font-size: 18px;
+  }
+
+  .footer {
+    font-size: 48px;
+  }
 }

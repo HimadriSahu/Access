@@ -25,38 +25,38 @@
       <!-- Left: Photo -->
       <div class="left-section">
         <div class="photo-border">
-          <img src="profile.jpg" alt="Profile" class="profile-photo" />
+          <!-- Placeholder for profile image -->
+          <img src="{{PROFILE_IMAGE_URL}}" alt="Profile" class="profile-photo" />
         </div>
       </div> 
 
       <!-- Right: Details -->
-        <div class="right-section">
-            <div class="details">
-                <span class="label">NAME:</span>
-                <span class="info">BODHISATTWA SANGHAPRIYA</span>
-            </div>
-            <div class="details">
-                <span class="label">DESIGNATION:</span>
-                <span class="info">FOUNDER & CEO</span>
-            </div>
-            <div class="details">
-                <span class="label">DEPARTMENT:</span>
-                <span class="info">CEO OFFICE</span>
-            </div>
-            <div class="details">
-                <span class="label">DATE:</span>
-                <span class="info">04.08.2025</span>
-            </div>
-            <div class="details">
-                <span class="label">TIME:</span>
-                <span class="info">16:57</span>
-            </div>
-            <div class="details">
-                <span class="label">LOCATION:</span>
-                <span class="info">BHUBANESHWAR, ODISHA</span>
-            </div>
-            
-        </div> 
+      <div class="right-section">
+        <div class="details">
+          <span class="label">NAME:</span>
+          <span class="info">{{USER_NAME}}</span>
+        </div>
+        <div class="details">
+          <span class="label">DESIGNATION:</span>
+          <span class="info">{{USER_DESIGNATION}}</span>
+        </div>
+        <div class="details">
+          <span class="label">DEPARTMENT:</span>
+          <span class="info">{{USER_DEPARTMENT}}</span>
+        </div>
+        <div class="details">
+          <span class="label">DATE:</span>
+          <span class="info">{{CURRENT_DATE}}</span>
+        </div>
+        <div class="details">
+          <span class="label">TIME:</span>
+          <span class="info">{{CURRENT_TIME}}</span>
+        </div>
+        <div class="details">
+          <span class="label">LOCATION:</span>
+          <span class="info">{{USER_LOCATION}}</span>
+        </div>
+      </div> 
     </div>
 
     <!-- Footer -->
